@@ -1,13 +1,10 @@
 <template>
     <section class="hero">
         <div class="container pt-5">
-            <h6>#1 Trending in Epic Games</h6>
-            <h3>Play for Free</h3>
-            <h1 class="text-dark title">Fortnite</h1>
-            <p>All the games, all the times. No additional
-                Purchases or revolving monthly catalogs. Play whatever
-                you want
-            </p>
+            <h6>{{ trending }}</h6>
+            <h3>{{ free }}</h3>
+            <h1 class="text-dark title">{{ title }}</h1>
+            <p>{{ caption }}</p>
             <div class="button mt-3 pt-2">
                 <a href="https://youtu.be/7CZC4gXVuKc?si=XCp9DGdcDKVFtcZ8" target="_blank" class="btn-fortnite text-decoration-none py-3" style="font-size: 30px;">
                     Watch Video
@@ -44,9 +41,15 @@
 
     export default {
         name: 'Home',
-        components:{
-           
-        }
+        data (){
+            return{
+                title :'Fortnite',
+                trending : '#1 Trending in Epic Games',
+                free :'Play for Free',
+                caption :'All the games, all the times. No additional  Purchases or revolving monthly catalogs. Play whatever you want'
+            }
+
+        },
     }
 </script>
 
